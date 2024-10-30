@@ -1,16 +1,34 @@
-# Cyberpunk Portfolio
+# Darcli
 
-Welcome to my Cyberpunk-themed portfolio! This project showcases my skills, projects, and more in a neon, futuristic style inspired by cyberpunk design.
+## Demo
 
-## Instructions
+You can see this theme on [gjuniioor.github.io/darcli](https://gjuniioor.github.io/darcli)
 
-1. Clone the repository:
+## Screenshot
 
-    git clone https://github.com/yourusername/portfolio.git
+![Screenshot of the them](assets/img/screenshot.png)
 
-2. Open `index.html` in your browser or deploy on GitHub Pages by pushing the main branch.
+## Why the name?
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
+It's just a joke: `dark + cli`.
+
+## Features
+
+* Categories
+* Disqus comments
+* SEO
+	* Description
+	* Keywords
+	* Open Cards to twitter, facebook, linkedin, google+ and others
+* Code post (but no highligth :] )
+* Atom **AND** RSS feeds
+
+## Warnings
+
+This is a theme intended to use to [lampiaosec website](https://lampiaosec.github.io) and after was converted to a general theme to jekyll.
+
+So, any questions, can you contact me ([@gjuniioor](https://github.com/gjuniioor)) or open a [issue](https://github.com/gjuniioor/darcli/issuesi).
+
+## License
+
+This theme is under [GPL3](assets/LICENSE).
