@@ -1,0 +1,25 @@
+#virus-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.virus {
+    position: absolute;
+    font-size: 1.5em;
+    color: #ff00ff;
+    transition: transform 0.2s ease-out;
+    filter: drop-shadow(0 0 6px #ff00ff);
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
