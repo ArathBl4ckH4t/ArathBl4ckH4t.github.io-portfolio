@@ -1,217 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructora SA de CV</title>
-
-    <style> 
-
-    *{
-        margin: 0%;
-    }
-
-    html,body{
-        height: 100%;
-    }
-
-  
-        header{
-            background-color: black;
-            
-        }
-
-        body{
-            background-color: rgb(12, 12, 12);
-        }
-
-        .logo{
-            margin-left: 20px;
-            width: 180px;
-            height: 180px;
-        }
-
-        .result{
-            background-color:rgb(247, 166, 15);
-            height: 2px;
-            border:1px solid rgb(247, 166, 15);
-        }
-
-        #container{
-            margin: 2%;
-            width: 90%;
-            height: 90%;
-          /*  border: 1px solid black; */
-            box-shadow: 1px 1px 1px 2px rgb(19, 18, 18);
-
-        }
-
-        .init{
-            width: 100%;
-            height: 60%;
-            border: 1px solid black;
-        }
-        .initf{
-            width: 60%;
-            height: auto;
-            position: relative;
-            bottom: 180px;
-            left: 300px;
-            color: white;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-            border-top: 2px solid rgb(7, 189, 10);
-            border-bottom: 2px solid rgb(216, 15, 15);
-            border-right: 1px solid white;
-            border-left: 1px solid white;
-            font-size: 32px;
-        }
-
-    
-
-        footer{
-            background-color: rgb(247, 166, 15);
-            height: 230px;
-        }
-
-        #img-tok{
-            width: 20%;
-           /* border: 1px solid black;*/ 
-        }
-
-        .chav{
-            width: 100%;
-            height: 100%;
-            filter: hue-rotate(20deg) brightness(15%);
-
-        }
-
-        .our{
-            position: relative;
-            display: inline-block;
-    
-            background-color: orange;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 1%;
-            text-decoration: none;
-            bottom:80px;
-            left: 35%;
-
-            
-        }
-        .contact{
-            position: relative;
-            display: inline-block;
-            background-color: orange;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 1%;
-            text-decoration: none;
-            bottom: 80px;
-            left: 10%;
-        }
-
-        .our:hover{
-            background-color: rgb(0, 0, 0);
-            color: white;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-            border-right: 8px solid white;
-            border-left: 1px solid white;  
-        }
-
-        .contact:hover{
-            background-color: rgb(0, 0, 0);
-            color: white;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-            border-right: 8px solid white;
-            border-left: 1px solid white;  
-
-        }
-
-        .search{
-            border: 0px;
-            width: 350px;
-            padding: 15px;
-            background-color: rgb(36, 33, 33);
-            color: white;
-            text-indent: 10%;
-            position: relative;
-            bottom: 70px;
-            left: 10%;
-
-        }
-
-        .search[placeholder]{
-            background-image: url(imgs/vidrio-de-aumento-2.png);
-            background-repeat: no-repeat;
-            background-position-y: 5px;
-            background-position-x: 95%;
-        }
-
-        .search:hover{
-            border-bottom: 2px solid orange;
-        }
-
-        #social{
-            width: 50px;
-            height: 50px;
-          
-            position: relative;
-            bottom: 60px;
-            left: 70%;
-        }
-        .social{
-            width: 100%;
-            height: 100%;
-        }
-
-        #social-tw{
-            width:50px;
-            height: 50px;
-
-            position: relative;
-            bottom: 50%;
-            left: 80%;
-
-        }
-
-
-    </style>
+   <meta charset="utf-8" />
+   <meta name="web site" content="">
+   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+   <title>Alan Yanse</title>
+   <link rel=" stylesheet" href="css/style.css" type="text/css" />
+   <link rel="shortcut icon" href="" type="image/x-icon" />
+   <script type="text/javascript" src="js/codigo.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-    <header><img src="imgs/logo-constructora-en-blanco.png" alt="logo" class="logo">
-    <input type="search" placeholder="Prueba el futuro ... " class="search">
-        <a href="#" class="our">NUESTRAS OBRAS</a>
-    <a href="#" class="contact">CONTACTO</a>
-
-    
-    </header>
-    <hr class="result">
-
-    <div id="container">
-        <div class="init">
-            <img src="imgs/PositiveCreamyEarwig-size_restricted.gif" class="chav">
-        </div>
-        <div class="initf">DESDE LA CDMX PARA TODA LA REPÚBLICA</div>
-        
-    </div>
-
-    <footer>
-        <div id="img-tok">
-            <img src="imgs/logo-constructora-en-blanco.png" class="logo">
-        </div>
-
-        <div id="social">
-            <img src="imgs/logotipo-circular-de-facebook-1.png" class="social">
-        </div>
-
-        <div id="social-tw">
-            <img src="imgs/gorjeo-1.png" class="social">
-        </div>
-    </footer>
+   <div class="container">
+      <nav>
+         <ul>
+            <li id="about">/acerca_de</li>
+            <li id="habilidades">/habilidades</li>
+            <li id="educacion">/educacion</li>
+            <li id="contacto">/contacto</li>
+         </ul>
+      </nav>
+      <main>
+         <h1>AlanYanse:<span class="cursor">|</span></h1>
+         <h3>Técnico administrativo</h3>
+      </main>
+   </div>
+   <!--Box container here-->
+   <div class="hidden">
+      <!-- Hidden about me Box container here-->
+      <div id="about-content">
+         <h2>quien_soy:<span class="cursor">|</span></h2>
+         <p>Me llamo Alan Yanse, soy un técnico electrónico con marcada orientación hacia la informática. Durante los últimos 10 años trabajé
+            en el rubro industrial, mas precisamente en el sector de mantenimiento y logística donde realizaba tareas de administración tales como
+            control de stock y calidad, recepción de camiones, preparación de pedidos, gestión de inventarios y órdenes de compra, soporte técnico a usuarios e interacción
+            con proveedores.
+         </p>
+      </div>
+      <!-- Hidden habilidades Box container here-->
+      <div id="habilidades-content">
+         <h3>Informática:<span class="cursor">|</span></h3>
+         <ul class="lista-hidden">
+            <li># Windows</li>
+            <li># Linux</li>
+            <li># Outlook</li>
+            <li># Word</li>
+            <li># Excel</li>
+            <li># HTML</li>
+            <li># JavaScript</li>
+            <li># Python</li>
+            <li># SQL</li>
+            <li># SAP</li>
+         </ul>
+         <h3>Idiomas:<span class="cursor">|</span></h3>
+         <ul class="lista-hidden">
+            <li># Inglés técnico</li>
+         </ul>
+         <h3>Otras habilidades:<span class="cursor">|</span></h3>
+         <ul class="lista-hidden">
+            <li># Operaciones logísticas</li>
+            <li># MRO</li>
+            <li># Manejo de autoelevador</li>
+         </ul>
+      </div>
+      <!-- Hidden educacion me Box container here-->
+      <div id="educacion-content">
+         <h3>Escuela de Educación Técnica 477 Combate de San Lorenzo</h3>
+         <ul class="lista-hidden">
+            <li># Título: Técnico electrónico</li>
+            <li># Estado: Finalizado</li>
+         </ul>
+         <h3>Universidad Nacional de Rosario</h3>
+         <ul class="lista-hidden">
+            <li># Título: Técnico en inteligencia artificial</li>
+            <li># Estado: En curso</li>
+         </ul>
+         <h3>Educación Online Udemy</h3>
+         <ul class="lista-hidden">
+            <li># Título: Administrador de Windows desde la consola</li>
+            <li># Estado: Finalizado</li>
+            <li># <a href="https://www.udemy.com/certificate/UC-fd1f211c-ab43-4fbe-b06b-92ea6d823f30/"><u>Link al certificado</u></a></li>
+         </ul>
+      </div>
+      <!-- Hidden contacto Box container here-->
+      <div id="contacto-content">
+         <ul class="lista-hidden">
+            <li># Teléfono: (0341)4919-403</li>
+            <li># <a href="https://api.whatsapp.com/send?phone=3413626503"><u>Whatsapp: 341-3626503</u></a></li>
+            <li># <a href="https://www.linkedin.com/in/alan-yanse/"><u>Linkedin</u></a></li>
+            <li># email: yansealan@gmail.com </li>
+         </ul>
+      </div>
+   </div>
+   <script src="js/winbox.bundle.js"></script>
+   <script src="js/main.js"></script>
 </body>
+
 </html>
