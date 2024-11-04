@@ -2,14 +2,14 @@
 // edit contain 1
 
 const about = document.getElementById("about");
-const habilidades = document.getElementById("habilidades");
+const skills = document.getElementById("skills");
 const educacion = document.getElementById("educacion");
 const contacto = document.getElementById("contacto");
 
 // edit contain 2
 
 const aboutContent = document.getElementById("about-content");
-const habilidadesContent = document.getElementById("habilidades-content");
+const skillsContent = document.getElementById("skills-content");
 const educacionContent = document.getElementById("educacion-content");
 const contactoContent = document.getElementById("contacto-content");
 
@@ -18,7 +18,7 @@ const contactoContent = document.getElementById("contacto-content");
 about.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "acerca de mí",
+        title: "About Me",
         width: "350px",
         height: "350px",
         top: 50,
@@ -36,18 +36,18 @@ about.addEventListener("click", ()=>{
     });
 });
 
-// WinBox del habilidades
+// WinBox del skills
 
-habilidades.addEventListener("click", ()=>{
+skills.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "habilidades",
+        title: "skills",
         top: 50,
         right: "5%",
         bottom: 50,
         left: "5%",
         autosize: true,
-        mount: habilidadesContent,
+        mount: skillsContent,
         onfocus: function(){
             this.setBackground("#00aa00")
         },
