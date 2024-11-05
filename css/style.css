@@ -47,13 +47,15 @@ nav{
     width: 80%;
 }
 
-ul{
-    
-    display: flex;
-    justify-content: flex-start;
+ul {
+    list-style-type: none;
+    display: flex; /* Mantiene el uso de flexbox */
+    justify-content: center; /* Cambia a center para centrar los elementos */
     align-items: center;
-
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
 }
+
 
 
 li{
