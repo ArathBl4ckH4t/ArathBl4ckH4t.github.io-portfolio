@@ -70,7 +70,7 @@ educacion.addEventListener("click", ()=>{
         bottom: 50,
         left: "5%",
         autosize: true,
-        mount: educacionContent,
+        mount: educationContent,
         onfocus: function(){
             this.setBackground("#00aa00")
         },
@@ -93,7 +93,7 @@ contacto.addEventListener("click", ()=>{
         bottom: 50,
         left: "5%",
         autosize: true,
-        mount: contactoContent,
+        mount: contactContent,
         onfocus: function(){
             this.setBackground("#00aa00")
         },
