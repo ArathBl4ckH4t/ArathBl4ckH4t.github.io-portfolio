@@ -3,15 +3,15 @@
 
 const about = document.getElementById("about");
 const skills = document.getElementById("skills");
-const educacion = document.getElementById("educacion");
-const contacto = document.getElementById("contacto");
+const education = document.getElementById("education");
+const contact = document.getElementById("contact");
 
 // edit contain 2
 
 const aboutContent = document.getElementById("about-content");
 const skillsContent = document.getElementById("skills-content");
-const educacionContent = document.getElementById("educacion-content");
-const contactoContent = document.getElementById("contacto-content");
+const educationContent = document.getElementById("education-content");
+const contactContent = document.getElementById("contact-content");
 
 // WinBox del about
 
@@ -64,7 +64,7 @@ skills.addEventListener("click", ()=>{
 educacion.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "educación",
+        title: "education",
         top: 50,
         right: "5%",
         bottom: 50,
@@ -87,7 +87,7 @@ educacion.addEventListener("click", ()=>{
 contacto.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "contacto",
+        title: "contact",
         top: 50,
         right: "5%",
         bottom: 50,
