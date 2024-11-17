@@ -58,10 +58,10 @@ skills.addEventListener("click", ()=>{
 });
 
 
-// WinBox de educación
+// WinBox de education
 
 
-educacion.addEventListener("click", ()=>{
+education.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
         title: "education",
@@ -81,10 +81,10 @@ educacion.addEventListener("click", ()=>{
 });
 
 
-// WinBox de contacto
+// WinBox de contact
 
 
-contacto.addEventListener("click", ()=>{
+contact.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
         title: "contact",
