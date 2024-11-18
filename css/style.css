@@ -124,4 +124,15 @@ li{
         text-align: left;
     }
 
+   .arrow-right {
+      display: inline-block;
+      transform: rotate(45deg);
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      padding: 4px;
+      margin-right: 8px;
+   }
+
+
+
 }
