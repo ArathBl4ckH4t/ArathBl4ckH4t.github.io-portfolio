@@ -41,7 +41,7 @@ about.addEventListener("click", ()=>{
 skills.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "skills",
+        title: "Skills",
         top: 50,
         right: "5%",
         bottom: 50,
@@ -64,7 +64,7 @@ skills.addEventListener("click", ()=>{
 education.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "education",
+        title: "Education",
         top: 50,
         right: "5%",
         bottom: 50,
@@ -87,7 +87,7 @@ education.addEventListener("click", ()=>{
 contact.addEventListener("click", ()=>{
 
     const aboutBox = new WinBox({
-        title: "contact",
+        title: "Contact",
         top: 50,
         right: "5%",
         bottom: 50,
