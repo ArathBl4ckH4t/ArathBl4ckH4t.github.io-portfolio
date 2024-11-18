@@ -23,7 +23,7 @@ about.addEventListener("click", ()=>{
         height: "200px",
         top: 10,
         right: "5%",
-        bottom: 200,
+        bottom: 10,
         left: "5%",
         autosize: true,
         mount: aboutContent,
