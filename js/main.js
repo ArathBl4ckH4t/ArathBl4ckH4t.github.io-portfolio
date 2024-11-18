@@ -43,7 +43,7 @@ skills.addEventListener("click", ()=>{
     const aboutBox = new WinBox({
         title: "Skills",
         width: "270px",
-        height: "200px",
+        height: "300px",
         top: 50,
         right: "5%",
         bottom: 50,
