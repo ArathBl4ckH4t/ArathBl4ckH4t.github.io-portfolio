@@ -15,91 +15,82 @@ const contactContent = document.getElementById("contact-content");
 
 // WinBox del about
 
-about.addEventListener("click", ()=>{
+function getRandomPosition() {
+    const top = Math.floor(Math.random() * (window.innerHeight - 350)); // Altura del viewport
+    const left = Math.floor(Math.random() * (window.innerWidth - 350)); // Ancho del viewport
+    return { top, left };
+}
 
+about.addEventListener("click", () => {
+    const { top, left } = getRandomPosition();
     const aboutBox = new WinBox({
         title: "About Me",
         width: "350px",
-        height: "200px",
-        top: 10,
-        right: "5%",
-        bottom: 10,
-        left: "5%",
-        autosize: true,
+        height: "350px",
+        top: top,
+        left: left,
         mount: aboutContent,
-        onfocus: function(){
-            this.setBackground("#00aa00")
+        onfocus: function () {
+            this.setBackground("#00aa00");
         },
-        onblur: function(){
-            this.setBackground("#777")
-        } 
+        onblur: function () {
+            this.setBackground("#777");
+        },
     });
 });
 
-// WinBox del skills
-
-skills.addEventListener("click", ()=>{
-
-    const aboutBox = new WinBox({
+skills.addEventListener("click", () => {
+    const { top, left } = getRandomPosition();
+    const skillsBox = new WinBox({
         title: "Skills",
-        top: 50,
-        right: "5%",
-        bottom: 50,
-        left: "5%",
-        autosize: true,
+        width: "350px",
+        height: "350px",
+        top: top,
+        left: left,
         mount: skillsContent,
-        onfocus: function(){
-            this.setBackground("#00aa00")
+        onfocus: function () {
+            this.setBackground("#00aa00");
         },
-        onblur: function(){
-            this.setBackground("#777")
-        } 
+        onblur: function () {
+            this.setBackground("#777");
+        },
     });
 });
 
-
-// WinBox de education
-
-
-education.addEventListener("click", ()=>{
-
-    const aboutBox = new WinBox({
+education.addEventListener("click", () => {
+    const { top, left } = getRandomPosition();
+    const educationBox = new WinBox({
         title: "Education",
-        top: 50,
-        right: "5%",
-        bottom: 50,
-        left: "5%",
-        autosize: true,
+        width: "350px",
+        height: "350px",
+        top: top,
+        left: left,
         mount: educationContent,
-        onfocus: function(){
-            this.setBackground("#00aa00")
+        onfocus: function () {
+            this.setBackground("#00aa00");
         },
-        onblur: function(){
-            this.setBackground("#777")
-        } 
+        onblur: function () {
+            this.setBackground("#777");
+        },
     });
 });
 
-
-// WinBox de contact
-
-
-contact.addEventListener("click", ()=>{
-
-    const aboutBox = new WinBox({
+contact.addEventListener("click", () => {
+    const { top, left } = getRandomPosition();
+    const contactBox = new WinBox({
         title: "Contact",
-        top: 50,
-        right: "5%",
-        bottom: 50,
-        left: "5%",
-        autosize: true,
+        width: "350px",
+        height: "350px",
+        top: top,
+        left: left,
         mount: contactContent,
-        onfocus: function(){
-            this.setBackground("#00aa00")
+        onfocus: function () {
+            this.setBackground("#00aa00");
         },
-        onblur: function(){
-            this.setBackground("#777")
-        } 
+        onblur: function () {
+            this.setBackground("#777");
+        },
     });
 });
+
 
