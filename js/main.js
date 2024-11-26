@@ -107,9 +107,9 @@ skills.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 354,
+        width: 295,
         height: 355,
-        left: 917,
+        left: 976,
         top: 232,
     };
 
@@ -178,7 +178,7 @@ education.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 435,
+        width: 371,
         height: 349,
         left: 66,
         top: 238
