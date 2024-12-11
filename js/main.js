@@ -37,8 +37,8 @@ about.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 1205,
-        height: 216,
+        width: 1518,
+        height: 275,
         left: 66,
         top: 10
     };
