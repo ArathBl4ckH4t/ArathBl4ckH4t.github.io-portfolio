@@ -5,13 +5,14 @@ const about = document.getElementById("about");
 const skills = document.getElementById("skills");
 const education = document.getElementById("education");
 const contact = document.getElementById("contact");
-
+const projects = document.getElementById("projects");
 // edit contain 2
 
 const aboutContent = document.getElementById("about-content");
 const skillsContent = document.getElementById("skills-content");
 const educationContent = document.getElementById("education-content");
 const contactContent = document.getElementById("contact-content");
+const projectsContent = document.getElementById("projects-content");
 
 // WinBox del about
 
@@ -289,4 +290,70 @@ contact.addEventListener("click", () => {
     }, 10);
 });
 
+projects.addEventListener("click", () => {
+    // Crear la ventana inicial
+    const projectsBox = new WinBox({
+        title: "Projects",
+        width: "270px",
+        height: "200px",
+        top: 10,
+        right: "5%",
+        bottom: 10,
+        left: "5%",
+        autosize: true,
+        mount: projectsContent,
+        onfocus: function () {
+            this.setBackground("#00aa00");
+        },
+        onblur: function () {
+            this.setBackground("#777");
+        }
+    });
+
+    // Configurar las propiedades finales
+    const targetStyles = {
+        width: 1518,
+        height: 703,
+        left: 66,
+        top: 10
+    };
+
+    // Variables iniciales
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50; 
+    let currentTop = 10;
+    const steps = 50; 
+    let stepCount = 0;
+
+    // Incrementos por paso
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+
+    // Animar usando setInterval
+    const interval = setInterval(() => {
+        stepCount++;
+
+        // Ajustar los valores en cada paso
+        currentWidth += incrementWidth;
+        currentHeight += incrementHeight;
+        currentLeft += incrementLeft;
+        currentTop += incrementTop;
+
+        // Aplicar los valores a la ventana
+        projectsBox.resize(currentWidth, currentHeight);
+        projectsBox.move(currentLeft, currentTop);
+
+        // Detener la animación cuando se llegue al paso final
+        if (stepCount >= steps) {
+            clearInterval(interval);
+
+            // Asegurar los valores finales exactos
+            projectsBox.resize(targetStyles.width, targetStyles.height);
+            projectsBox.move(targetStyles.left, targetStyles.top);
+        }
+    }, 10); 
+});
 
