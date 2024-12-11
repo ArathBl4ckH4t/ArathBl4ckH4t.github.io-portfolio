@@ -107,10 +107,10 @@ skills.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 295,
-        height: 355,
-        left: 976,
-        top: 232,
+        width: 318,
+        height: 401,
+        left: 1262,
+        top: 307,
     };
 
     // Variables iniciales
@@ -178,10 +178,10 @@ education.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 371,
-        height: 349,
-        left: 66,
-        top: 238
+        width: 505,
+        height: 399,
+        left: 84,
+        top: 309
     };
 
     // Variables iniciales
@@ -244,10 +244,10 @@ contact.addEventListener("click", () => {
 
     // Configurar las propiedades finales
     const targetStyles = {
-        width: 339,
-        height: 160,
-        left: 529,
-        top: 427
+        width: 389,
+        height: 199,
+        left: 692,
+        top: 499
     };
 
     // Variables iniciales
