@@ -247,7 +247,7 @@ contact.addEventListener("click", () => {
     const targetStyles = {
         width: 389,
         height: 199,
-        left: 694,
+        left: 692,
         top: 518
     };
 
