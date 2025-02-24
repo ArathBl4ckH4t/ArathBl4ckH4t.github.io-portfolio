@@ -247,8 +247,8 @@ contact.addEventListener("click", () => {
     const targetStyles = {
         width: 389,
         height: 199,
-        left: 692,
-        top: 518
+        left: 652,
+        top: 528
     };
 
     // Variables iniciales
