@@ -2,13 +2,25 @@
 <html lang="en">
 
 <head>
+   <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
    <meta charset="utf-8" />
    <meta name="web site" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
    <title>Portfolio Arath</title>
    <link rel=" stylesheet" href="css/style.css" type="text/css" />
    <link rel="shortcut icon" href="" type="image/x-icon" />
-   <script src="js/particles.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+   <!-- <script src="js/particles.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          particlesJS.load('particles-js', 'particles-config.json', function() {
+              console.log("Particles.js cargado correctamente.");
+          });
+      });
+  </script>
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -278,8 +290,8 @@
 
 
    </div>
-   <script src="js/winbox.bundle.js"></script>
-   <script src="js/main.js"></script>
+   <script src="js/winbox.bundle.js" defear></script>
+   <script src="js/main.js" defear></script>
 
    
 
