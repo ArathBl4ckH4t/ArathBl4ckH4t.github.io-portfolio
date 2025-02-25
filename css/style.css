@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
+  
 :root{
     --text-color : #00aa00;
 }
@@ -128,3 +129,9 @@ li{
    
 
 }
+.text-container {
+    display: inline-block;
+    width: 8ch; /* Tamaño fijo para que no se mueva */
+    text-align: left;
+}
+

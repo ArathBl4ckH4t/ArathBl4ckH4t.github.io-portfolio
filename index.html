@@ -8,23 +8,154 @@
    <title>Portfolio Arath</title>
    <link rel=" stylesheet" href="css/style.css" type="text/css" />
    <link rel="shortcut icon" href="" type="image/x-icon" />
-   <script type="text/javascript" src="js/codigo.js"></script>
+   <script src="js/particles.min.js"></script>
+
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style>
+      #particles-js {
+         position: fixed;  /* Fija el div para que siempre esté detrás */
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         z-index: -1; /* Envía el div al fondo */
+         background: #000000; /* Asegura que el fondo sea negro */
+     }
+     
+   </style>
 </head>
 
 <body>
+   <div id="particles-js"></div>
+   <script src="particles.js"></script>
+   <script>
+      particlesJS(
+         {
+            "particles": {
+              "number": {
+                "value": 50,
+                "density": {
+                  "enable": true,
+                  "value_area": 800
+                }
+              },
+              "color": {
+                "value": "#ffffff"
+              },
+              "shape": {
+                "type": "circle",
+                "stroke": {
+                  "width": 0,
+                  "color": "#000000"
+                },
+                "polygon": {
+                  "nb_sides": 5
+                },
+                "image": {
+                  "src": "img/github.svg",
+                  "width": 100,
+                  "height": 100
+                }
+              },
+              "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                  "enable": false,
+                  "speed": 1,
+                  "opacity_min": 0.1,
+                  "sync": false
+                }
+              },
+              "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                  "enable": false,
+                  "speed": 40,
+                  "size_min": 0.1,
+                  "sync": false
+                }
+              },
+              "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+              },
+              "move": {
+                "enable": true,
+                "speed": 3,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                  "enable": false,
+                  "rotateX": 600,
+                  "rotateY": 1200
+                }
+              }
+            },
+            "interactivity": {
+              "detect_on": "window",
+              "events": {
+                "onhover": {
+                  "enable": true,
+                  "mode": "repulse"
+                },
+                "onclick": {
+                  "enable": true,
+                  "mode": "push"
+                },
+                "resize": true
+              },
+              "modes": {
+                "grab": {
+                  "distance": 400,
+                  "line_linked": {
+                    "opacity": 1
+                  }
+                },
+                "bubble": {
+                  "distance": 400,
+                  "size": 40,
+                  "duration": 2,
+                  "opacity": 8,
+                  "speed": 3
+                },
+                "repulse": {
+                  "distance": 200,
+                  "duration": 0.4
+                },
+                "push": {
+                  "particles_nb": 1
+                },
+                "remove": {
+                  "particles_nb": 1
+                }
+              }
+            },
+            "retina_detect": true
+          }
+      )
+   </script>
    <div class="container">
       <main>
-         <h1>Arath Nieto:<span class="cursor">|</span></h1>
+         <h1>Arath Nieto:<span class="text-container"><span class="cursor">|</span></span></h1>
          <h3>Computer Systems Engineer</h3>
       </main>
       <nav>
         <ul>
-           <li id="about">/about</li>
-           <li id="skills">/skills</li>
-           <li id="education">/education</li>
-           <li id="contact">/contact</li>
-           <li id="projects">/projects</li>
+           <li id="about">/About</li>
+           <li id="skills">/Skills</li>
+           <li id="education">/Education</li>
+           <li id="contact">/Contact</li>
+           <li id="projects">/Projects</li>
+           <li id="cv">/CV</li>
         </ul>
      </nav>
    </div>
@@ -96,14 +227,14 @@
       <!-- Hidden contacto Box container here-->
       <div id="contact-content">
          <ul class="lista-hidden">
-            <li># Telefono: +52 5613845080</li>
+            <li># Phone: +52 5613845080</li>
             <li># <a href="https://wa.me/525613845080?text=Buenos%20dias%20Arath%20Nieto%20soy"><u>Whatsapp</u></a></li>
             <li># <a href="https://www.linkedin.com/in/arath-nieto-332698218/"><u>Linkedin</u></a></li>
             <li># <a href="https://github.com/ArathBl4ckH4t"><u>GitHub</u></a></li>
             <li># email: <a href="mailto:arathnieto79@gmail.com">arathnieto79@gmail.com</a></li>
          </ul>
       </div>
-
+      
       <!-- Hidden projects Box container here-->
 
       <div id="projects-content">
@@ -117,9 +248,20 @@
          </ul>
       </div>
 
+      <div id="cv-content" style="width:100%; height:100%;">
+         <a href="./cv/ArathNieto_CV.pdf" target="_blank">
+           <iframe src="./cv/ArathNieto_CV.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
+         </a>
+       </div>
+       
+
+
    </div>
    <script src="js/winbox.bundle.js"></script>
    <script src="js/main.js"></script>
+
+   
+
 </body>
 
 </html>
