@@ -1,6 +1,12 @@
 
 /*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');*/
 
+.indent {
+    padding-left: 20px; /* Ajusta el valor según la indentación deseada */
+}
+.indentone {
+    padding-left: 60px;
+}
   
 :root{
     --text-color : #00aa00;

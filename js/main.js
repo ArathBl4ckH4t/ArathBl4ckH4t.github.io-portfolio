@@ -200,7 +200,7 @@ contact.addEventListener("click", () => {
   });
   openWinBoxes.push(contactBox);
 
-  const targetStyles = { width: 389, height: 235, left: 778, top: 524 };
+  const targetStyles = { width: 389, height: 203, left: 748, top: 555 };
   let currentWidth = 270;
   let currentHeight = 200;
   let currentLeft = 50;
