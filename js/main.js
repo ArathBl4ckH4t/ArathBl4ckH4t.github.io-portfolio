@@ -25,276 +25,303 @@ function closeAllWinBoxes() {
 }
 
 
-// ================= WinBox About =================
 about.addEventListener("click", () => {
-  const aboutBox = new WinBox({
-    title: "About Me",
-    width: "270px",
-    height: "200px",
-    top: 10,
-    right: "5%",
-    bottom: 10,
-    left: "5%",
-    autosize: true,
-    mount: aboutContent,
-    onfocus: function () {
-      this.setBackground("#00aa00");
-    },
-    onblur: function () {
-      this.setBackground("#777");
+    const aboutBox = new WinBox({
+      title: "About Me",
+      width: "270px",
+      height: "200px",
+      top: 10,
+      right: "5%",
+      bottom: 10,
+      left: "5%",
+      autosize: true,
+      mount: aboutContent,
+      onfocus: function () {
+        this.setBackground("#00aa00");
+      },
+      onblur: function () {
+        this.setBackground("#777");
+      }
+    });
+  
+    openWinBoxes.push(aboutBox);
+  
+    // Animación con requestAnimationFrame
+    const targetStyles = { width: 1518, height: 262, left: 143, top: 22 };
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50;
+    let currentTop = 10;
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
+    function animate() {
+      if (stepCount >= steps) {
+        aboutBox.resize(targetStyles.width, targetStyles.height);
+        aboutBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
+      stepCount++;
+      currentWidth += incrementWidth;
+      currentHeight += incrementHeight;
+      currentLeft += incrementLeft;
+      currentTop += incrementTop;
+  
+      aboutBox.resize(currentWidth, currentHeight);
+      aboutBox.move(currentLeft, currentTop);
+  
+      requestAnimationFrame(animate);
     }
+  
+    requestAnimationFrame(animate);
   });
-  // Agregamos la ventana About al arreglo
-  openWinBoxes.push(aboutBox);
-
-  // Animación
-  const targetStyles = { width: 1518, height: 262, left: 143, top: 22 };
-  let currentWidth = 270;
-  let currentHeight = 200;
-  let currentLeft = 50;
-  let currentTop = 10;
-  const steps = 50;
-  let stepCount = 0;
-  const incrementWidth = (targetStyles.width - currentWidth) / steps;
-  const incrementHeight = (targetStyles.height - currentHeight) / steps;
-  const incrementLeft = (targetStyles.left - currentLeft) / steps;
-  const incrementTop = (targetStyles.top - currentTop) / steps;
-
-  const interval = setInterval(() => {
-    stepCount++;
-    currentWidth += incrementWidth;
-    currentHeight += incrementHeight;
-    currentLeft += incrementLeft;
-    currentTop += incrementTop;
-
-    aboutBox.resize(currentWidth, currentHeight);
-    aboutBox.move(currentLeft, currentTop);
-
-    if (stepCount >= steps) {
-      clearInterval(interval);
-      aboutBox.resize(targetStyles.width, targetStyles.height);
-      aboutBox.move(targetStyles.left, targetStyles.top);
-    }
-  }, 10);
-});
-
+  
 
 // ================= WinBox Skills =================
 skills.addEventListener("click", () => {
-  const skillsBox = new WinBox({
-    title: "Skills",
-    width: "270px",
-    height: "300px",
-    top: 50,
-    right: "5%",
-    bottom: 50,
-    left: "5%",
-    autosize: true,
-    mount: skillsContent,
-    onfocus: function () {
-      this.setBackground("#00aa00");
-    },
-    onblur: function () {
-      this.setBackground("#777");
+    const skillsBox = new WinBox({
+      title: "Skills",
+      width: "270px",
+      height: "300px",
+      top: 50,
+      right: "5%",
+      bottom: 50,
+      left: "5%",
+      autosize: true,
+      mount: skillsContent,
+      onfocus: function () {
+        this.setBackground("#00aa00");
+      },
+      onblur: function () {
+        this.setBackground("#777");
+      }
+    });
+  
+    openWinBoxes.push(skillsBox);
+  
+    // Animación con requestAnimationFrame
+    const targetStyles = { width: 318, height: 453, left: 1391, top: 306 };
+    let currentWidth = 270;
+    let currentHeight = 300;
+    let currentLeft = 50;
+    let currentTop = 50;
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
+    function animate() {
+      if (stepCount >= steps) {
+        skillsBox.resize(targetStyles.width, targetStyles.height);
+        skillsBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
+      stepCount++;
+      currentWidth += incrementWidth;
+      currentHeight += incrementHeight;
+      currentLeft += incrementLeft;
+      currentTop += incrementTop;
+  
+      skillsBox.resize(currentWidth, currentHeight);
+      skillsBox.move(currentLeft, currentTop);
+  
+      requestAnimationFrame(animate);
     }
+  
+    requestAnimationFrame(animate);
   });
-  openWinBoxes.push(skillsBox);
-
-  const targetStyles = { width: 318, height: 453, left: 1391, top: 306 };
-  let currentWidth = 270;
-  let currentHeight = 300;
-  let currentLeft = 50;
-  let currentTop = 50;
-  const steps = 50;
-  let stepCount = 0;
-  const incrementWidth = (targetStyles.width - currentWidth) / steps;
-  const incrementHeight = (targetStyles.height - currentHeight) / steps;
-  const incrementLeft = (targetStyles.left - currentLeft) / steps;
-  const incrementTop = (targetStyles.top - currentTop) / steps;
-
-  const interval = setInterval(() => {
-    stepCount++;
-    currentWidth += incrementWidth;
-    currentHeight += incrementHeight;
-    currentLeft += incrementLeft;
-    currentTop += incrementTop;
-
-    skillsBox.resize(currentWidth, currentHeight);
-    skillsBox.move(currentLeft, currentTop);
-
-    if (stepCount >= steps) {
-      clearInterval(interval);
-      skillsBox.resize(targetStyles.width, targetStyles.height);
-      skillsBox.move(targetStyles.left, targetStyles.top);
-    }
-  }, 10);
-});
+  
 
 
 // ================= WinBox Education =================
 education.addEventListener("click", () => {
-  const educationBox = new WinBox({
-    title: "Education",
-    top: 50,
-    right: "5%",
-    bottom: 50,
-    left: "5%",
-    autosize: true,
-    mount: educationContent,
-    onfocus: function () {
-      this.setBackground("#00aa00");
-    },
-    onblur: function () {
-      this.setBackground("#777");
+    const educationBox = new WinBox({
+      title: "Education",
+      top: 50,
+      right: "5%",
+      bottom: 50,
+      left: "5%",
+      autosize: true,
+      mount: educationContent,
+      onfocus: function () {
+        this.setBackground("#00aa00");
+      },
+      onblur: function () {
+        this.setBackground("#777");
+      }
+    });
+  
+    openWinBoxes.push(educationBox);
+  
+    // Animación con requestAnimationFrame
+    const targetStyles = { width: 495, height: 432, left: 84, top: 309 };
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50;
+    let currentTop = 50;
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
+    function animate() {
+      if (stepCount >= steps) {
+        educationBox.resize(targetStyles.width, targetStyles.height);
+        educationBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
+      stepCount++;
+      currentWidth += incrementWidth;
+      currentHeight += incrementHeight;
+      currentLeft += incrementLeft;
+      currentTop += incrementTop;
+  
+      educationBox.resize(currentWidth, currentHeight);
+      educationBox.move(currentLeft, currentTop);
+  
+      requestAnimationFrame(animate);
     }
+  
+    requestAnimationFrame(animate);
   });
-  openWinBoxes.push(educationBox);
-
-  const targetStyles = { width: 495, height: 432, left: 84, top: 309 };
-  let currentWidth = 270;
-  let currentHeight = 200;
-  let currentLeft = 50;
-  let currentTop = 50;
-  const steps = 50;
-  let stepCount = 0;
-  const incrementWidth = (targetStyles.width - currentWidth) / steps;
-  const incrementHeight = (targetStyles.height - currentHeight) / steps;
-  const incrementLeft = (targetStyles.left - currentLeft) / steps;
-  const incrementTop = (targetStyles.top - currentTop) / steps;
-
-  const interval = setInterval(() => {
-    stepCount++;
-    currentWidth += incrementWidth;
-    currentHeight += incrementHeight;
-    currentLeft += incrementLeft;
-    currentTop += incrementTop;
-
-    educationBox.resize(currentWidth, currentHeight);
-    educationBox.move(currentLeft, currentTop);
-
-    if (stepCount >= steps) {
-      clearInterval(interval);
-      educationBox.resize(targetStyles.width, targetStyles.height);
-      educationBox.move(targetStyles.left, targetStyles.top);
-    }
-  }, 10);
-});
-
+  
 
 // ================= WinBox Contact =================
 contact.addEventListener("click", () => {
-  const contactBox = new WinBox({
-    title: "Contact",
-    top: 50,
-    right: "5%",
-    bottom: 50,
-    left: "5%",
-    autosize: true,
-    mount: contactContent,
-    onfocus: function () {
-      this.setBackground("#00aa00");
-    },
-    onblur: function () {
-      this.setBackground("#777");
+    const contactBox = new WinBox({
+      title: "Contact",
+      top: 50,
+      right: "5%",
+      bottom: 50,
+      left: "5%",
+      autosize: true,
+      mount: contactContent,
+      onfocus: function () {
+        this.setBackground("#00aa00");
+      },
+      onblur: function () {
+        this.setBackground("#777");
+      }
+    });
+  
+    openWinBoxes.push(contactBox);
+  
+    // Animación con requestAnimationFrame
+    const targetStyles = { width: 389, height: 203, left: 748, top: 555 };
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50;
+    let currentTop = 50;
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
+    function animate() {
+      if (stepCount >= steps) {
+        contactBox.resize(targetStyles.width, targetStyles.height);
+        contactBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
+      stepCount++;
+      currentWidth += incrementWidth;
+      currentHeight += incrementHeight;
+      currentLeft += incrementLeft;
+      currentTop += incrementTop;
+  
+      contactBox.resize(currentWidth, currentHeight);
+      contactBox.move(currentLeft, currentTop);
+  
+      requestAnimationFrame(animate);
     }
+  
+    requestAnimationFrame(animate);
   });
-  openWinBoxes.push(contactBox);
-
-  const targetStyles = { width: 389, height: 203, left: 748, top: 555 };
-  let currentWidth = 270;
-  let currentHeight = 200;
-  let currentLeft = 50;
-  let currentTop = 50;
-  const steps = 50;
-  let stepCount = 0;
-  const incrementWidth = (targetStyles.width - currentWidth) / steps;
-  const incrementHeight = (targetStyles.height - currentHeight) / steps;
-  const incrementLeft = (targetStyles.left - currentLeft) / steps;
-  const incrementTop = (targetStyles.top - currentTop) / steps;
-
-  const interval = setInterval(() => {
-    stepCount++;
-    currentWidth += incrementWidth;
-    currentHeight += incrementHeight;
-    currentLeft += incrementLeft;
-    currentTop += incrementTop;
-
-    contactBox.resize(currentWidth, currentHeight);
-    contactBox.move(currentLeft, currentTop);
-
-    if (stepCount >= steps) {
-      clearInterval(interval);
-      contactBox.resize(targetStyles.width, targetStyles.height);
-      contactBox.move(targetStyles.left, targetStyles.top);
-    }
-  }, 10);
-});
+  
 
 
 // ================= WinBox Projects =================
+
 projects.addEventListener("click", () => {
-    // Cerrar todas las ventanas abiertas antes de abrir la de projects
+    // Cerrar todas las ventanas abiertas antes de abrir la de Projects
     closeAllWinBoxes();
+  
     const projectsBox = new WinBox({
-    title: "Projects",
-    width: "270px",
-    height: "200px",
-    top: 10,
-    right: "5%",
-    bottom: 10,
-    left: "5%",
-    autosize: true,
-    mount: projectsContent,
-    onfocus: function () {
-      this.setBackground("#00aa00");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
-    onclose: function() {
+      title: "Projects",
+      width: "270px",
+      height: "200px",
+      top: 10,
+      right: "5%",
+      bottom: 10,
+      left: "5%",
+      autosize: true,
+      mount: projectsContent,
+      onfocus: function () {
+        this.setBackground("#00aa00");
+      },
+      onblur: function () {
+        this.setBackground("#777");
+      },
+      onclose: function () {
         // Remover esta ventana del arreglo al cerrarse manualmente
         const index = openWinBoxes.indexOf(this);
         if (index > -1) {
           openWinBoxes.splice(index, 1);
         }
       }
-  });
-
+    });
   
-  openWinBoxes.push(projectsBox);
+    openWinBoxes.push(projectsBox);
   
-
-  const targetStyles = { width: 1145, height: 645, left: 335, top: 59 };
-  let currentWidth = 1145;
-  let currentHeight = 645;
-  let currentLeft = 335;
-  let currentTop = 59;
-
-  const steps = 50;
-  let stepCount = 0;
-  const incrementWidth = (targetStyles.width - currentWidth) / steps;
-  const incrementHeight = (targetStyles.height - currentHeight) / steps;
-  const incrementLeft = (targetStyles.left - currentLeft) / steps;
-  const incrementTop = (targetStyles.top - currentTop) / steps;
-
-  const interval = setInterval(() => {
-    stepCount++;
-    currentWidth += incrementWidth;
-    currentHeight += incrementHeight;
-    currentLeft += incrementLeft;
-    currentTop += incrementTop;
-
-    projectsBox.resize(currentWidth, currentHeight);
-    projectsBox.move(currentLeft, currentTop);
-
-    if (stepCount >= steps) {
-      clearInterval(interval);
-      projectsBox.resize(targetStyles.width, targetStyles.height);
-      projectsBox.move(targetStyles.left, targetStyles.top);
+    // Animación con requestAnimationFrame
+    const targetStyles = { width: 1145, height: 645, left: 335, top: 59 };
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 10;
+    let currentTop = 10;
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
+    function animate() {
+      if (stepCount >= steps) {
+        projectsBox.resize(targetStyles.width, targetStyles.height);
+        projectsBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
+      stepCount++;
+      currentWidth += incrementWidth;
+      currentHeight += incrementHeight;
+      currentLeft += incrementLeft;
+      currentTop += incrementTop;
+  
+      projectsBox.resize(currentWidth, currentHeight);
+      projectsBox.move(currentLeft, currentTop);
+  
+      requestAnimationFrame(animate);
     }
-  }, 10);
-});
-
+  
+    requestAnimationFrame(animate);
+  });
+  
 
 // ================= WinBox CV (cierra todas las demás) =================
 cv.addEventListener("click", () => {
@@ -303,6 +330,8 @@ cv.addEventListener("click", () => {
   
     const cvBox = new WinBox({
       title: "CV",
+      width: "270px",
+      height: "200px",
       top: 50,
       right: "5%",
       bottom: 50,
@@ -315,7 +344,7 @@ cv.addEventListener("click", () => {
       onblur: function () {
         this.setBackground("#777");
       },
-      onclose: function() {
+      onclose: function () {
         // Remover esta ventana del arreglo cuando se cierre manualmente
         const index = openWinBoxes.indexOf(this);
         if (index > -1) {
@@ -324,16 +353,15 @@ cv.addEventListener("click", () => {
       }
     });
   
-    // Agregamos la ventana de CV al arreglo global
+    // Agregar la ventana de CV al arreglo global
     openWinBoxes.push(cvBox);
   
     // Configurar la animación
     const targetStyles = { width: 829, height: 709, left: 499, top: 50 };
-    let currentWidth = 829;
-    let currentHeight = 709;
-    let currentLeft = 499;
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50;
     let currentTop = 50;
-
     const steps = 50;
     let stepCount = 0;
     const incrementWidth = (targetStyles.width - currentWidth) / steps;
@@ -341,7 +369,13 @@ cv.addEventListener("click", () => {
     const incrementLeft = (targetStyles.left - currentLeft) / steps;
     const incrementTop = (targetStyles.top - currentTop) / steps;
   
-    const interval = setInterval(() => {
+    function animate() {
+      if (stepCount >= steps) {
+        cvBox.resize(targetStyles.width, targetStyles.height);
+        cvBox.move(targetStyles.left, targetStyles.top);
+        return;
+      }
+  
       stepCount++;
       currentWidth += incrementWidth;
       currentHeight += incrementHeight;
@@ -351,13 +385,12 @@ cv.addEventListener("click", () => {
       cvBox.resize(currentWidth, currentHeight);
       cvBox.move(currentLeft, currentTop);
   
-      if (stepCount >= steps) {
-        clearInterval(interval);
-        cvBox.resize(targetStyles.width, targetStyles.height);
-        cvBox.move(targetStyles.left, targetStyles.top);
-      }
-    }, 10);
+      requestAnimationFrame(animate);
+    }
+  
+    requestAnimationFrame(animate);
   });
+  
   
 
 // ================= Efecto de escritura en el DOM =================
