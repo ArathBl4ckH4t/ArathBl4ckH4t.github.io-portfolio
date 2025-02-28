@@ -26,14 +26,43 @@ function closeAllWinBoxes() {
 
 
 about.addEventListener("click", () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const isMobile = screenWidth <= 768; // Consideramos móvil si el ancho es menor a 768px
+  
+    // Medidas en PC (fijas)
+    const pcTargetStyles = { width: 1518, height: 262, left: 143, top: 22 };
+  
+    // Medidas en Móvil (ajustadas dinámicamente)
+    const mobileTargetStyles = {
+      width: screenWidth * 0.9,
+      height: screenHeight * 0.5,
+      left: (screenWidth - screenWidth * 0.9) / 2,
+      top: (screenHeight - screenHeight * 0.5) / 2,
+    };
+  
+    // Determinar si usar las medidas de PC o de Móvil
+    const targetStyles = isMobile ? mobileTargetStyles : pcTargetStyles;
+  
+    // Medidas iniciales (para la animación)
+    let currentWidth = 270;
+    let currentHeight = 200;
+    let currentLeft = 50;
+    let currentTop = 10;
+  
+    const steps = 50;
+    let stepCount = 0;
+    const incrementWidth = (targetStyles.width - currentWidth) / steps;
+    const incrementHeight = (targetStyles.height - currentHeight) / steps;
+    const incrementLeft = (targetStyles.left - currentLeft) / steps;
+    const incrementTop = (targetStyles.top - currentTop) / steps;
+  
     const aboutBox = new WinBox({
       title: "About Me",
-      width: "270px",
-      height: "200px",
-      top: 10,
-      right: "5%",
-      bottom: 10,
-      left: "5%",
+      width: `${currentWidth}px`,
+      height: `${currentHeight}px`,
+      top: `${currentTop}px`,
+      left: `${currentLeft}px`,
       autosize: true,
       mount: aboutContent,
       onfocus: function () {
@@ -47,18 +76,6 @@ about.addEventListener("click", () => {
     openWinBoxes.push(aboutBox);
   
     // Animación con requestAnimationFrame
-    const targetStyles = { width: 1518, height: 262, left: 143, top: 22 };
-    let currentWidth = 270;
-    let currentHeight = 200;
-    let currentLeft = 50;
-    let currentTop = 10;
-    const steps = 50;
-    let stepCount = 0;
-    const incrementWidth = (targetStyles.width - currentWidth) / steps;
-    const incrementHeight = (targetStyles.height - currentHeight) / steps;
-    const incrementLeft = (targetStyles.left - currentLeft) / steps;
-    const incrementTop = (targetStyles.top - currentTop) / steps;
-  
     function animate() {
       if (stepCount >= steps) {
         aboutBox.resize(targetStyles.width, targetStyles.height);
@@ -67,19 +84,15 @@ about.addEventListener("click", () => {
       }
   
       stepCount++;
-      currentWidth += incrementWidth;
-      currentHeight += incrementHeight;
-      currentLeft += incrementLeft;
-      currentTop += incrementTop;
-  
-      aboutBox.resize(currentWidth, currentHeight);
-      aboutBox.move(currentLeft, currentTop);
+      aboutBox.resize(currentWidth + incrementWidth * stepCount, currentHeight + incrementHeight * stepCount);
+      aboutBox.move(currentLeft + incrementLeft * stepCount, currentTop + incrementTop * stepCount);
   
       requestAnimationFrame(animate);
     }
   
     requestAnimationFrame(animate);
   });
+  
   
 
 // ================= WinBox Skills =================
